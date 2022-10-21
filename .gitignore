@@ -1,0 +1,59 @@
+
+# Created by https://www.toptal.com/developers/gitignore/api/xcode,cocoapods
+# Edit at https://www.toptal.com/developers/gitignore?templates=xcode,cocoapods
+
+### CocoaPods ###
+## CocoaPods GitIgnore Template
+
+# CocoaPods - Only use to conserve bandwidth / Save time on Pushing
+#           - Also handy if you have a large number of dependant pods
+#           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
+Pods/
+
+### Xcode ###
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Project 파일명 참조 : https://ios-development.tistory.com/406
+
+## User settings
+## 프로젝트 자체에 크게 영향을 주지 않는 개인 설정을 담은 디렉토리: breakpoint, 스냅샷 등
+xcuserdata/
+
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+*.xcscmblueprint
+*.xccheckout
+
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+## Gcc Patch
+/*.gcno
+
+### Xcode Patch ###
+##  파일이 아닌 디렉토리
+#*.xcodeproj/*  
+
+## 프로젝트 내부에서 파일들을 파일 유형에 따라 reference를 저장
+#!*.xcodeproj/project.pbxproj
+
+## 공통적으로 적용되어 있는 정의이며 .plist형태로 정의
+#!*.xcodeproj/xcshareddata/
+
+## project파일의 reference가 정의되어 있는 파일
+#!*.xcworkspace/contents.xcworkspacedata
+
+#**/xcshareddata/WorkspaceSettings.xcsettings
+
+# End of https://www.toptal.com/developers/gitignore/api/xcode,cocoapods
