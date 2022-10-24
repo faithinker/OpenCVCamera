@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Photos
 //import AVFAudio
 import SnapKit
 import Then
@@ -34,11 +35,12 @@ class ViewController: UIViewController {
     
     private lazy var output = AVCapturePhotoOutput()
     
+    // MARK: - View
+    
     private lazy var button = UIButton().then {
         $0.layer.cornerRadius = 40
         $0.layer.borderColor = UIColor.systemBlue.cgColor
         $0.layer.borderWidth = 5
-        $0.setBackgroundColor(.systemBlue, for: .highlighted)
     }
     
     override func viewDidLoad() {
@@ -123,20 +125,33 @@ class ViewController: UIViewController {
 
 
 extension ViewController: AVCapturePhotoCaptureDelegate {
+    func photoOutput(_ output: AVCapturePhotoOutput, willCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
+        AudioServicesDisposeSystemSoundID(1108)
+        
+        DispatchQueue.main.async {
+            self.previewView.layer.opacity = 0.7
+            UIView.animate(withDuration: 0.25) {
+                self.previewView.layer.opacity = 1
+            }
+        }
+    }
+    
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         guard let data = photo.fileDataRepresentation() else { return }
         
-        session.stopRunning()
+        //session.stopRunning()
+        
+        let image = UIImage(data: data)!
+        
+//        let imageView = UIImageView(image: image).then {
+//            $0.contentMode = .scaleAspectFill
+//            $0.frame = previewView.bounds
+//        }
+//
+//        view.addSubview(imageView)
         
         
-        let imageView = UIImageView(image: UIImage(data: data)).then {
-            $0.contentMode = .scaleAspectFill
-            $0.frame = previewView.bounds
-        }
-        
-        view.addSubview(imageView)
-        startCaptureSession()
-        
+        UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
     }
 }
 
