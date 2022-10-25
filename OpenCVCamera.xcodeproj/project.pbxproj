@@ -13,6 +13,7 @@
 		0526CF5529026976001E269A /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 0526CF5429026976001E269A /* RxRelay */; };
 		0526CF5729026976001E269A /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0526CF5629026976001E269A /* RxSwift */; };
 		0526CF5929026D45001E269A /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526CF5829026D45001E269A /* UIButton+.swift */; };
+		05A803502907B19200027B73 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8034F2907B19200027B73 /* FilterCell.swift */; };
 		05F0C46629012D0200AB4056 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0C46529012D0200AB4056 /* AppDelegate.swift */; };
 		05F0C46829012D0200AB4056 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0C46729012D0200AB4056 /* SceneDelegate.swift */; };
 		05F0C46A29012D0200AB4056 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0C46929012D0200AB4056 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		0526CF4C2902391A001E269A /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 		0526CF5829026D45001E269A /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		05A8034F2907B19200027B73 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		05F0C46229012D0200AB4056 /* OpenCVCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCVCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05F0C46529012D0200AB4056 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05F0C46729012D0200AB4056 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				05F0C46929012D0200AB4056 /* ViewController.swift */,
+				05A8034F2907B19200027B73 /* FilterCell.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05A803502907B19200027B73 /* FilterCell.swift in Sources */,
 				05F0C4A429014C6500AB4056 /* UIView+.swift in Sources */,
 				0526CF5929026D45001E269A /* UIButton+.swift in Sources */,
 				0526CF4D2902391A001E269A /* PermissionManager.swift in Sources */,

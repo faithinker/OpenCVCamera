@@ -92,7 +92,11 @@ extension UIView {
         gradient.locations = locations
         self.layer.insertSublayer(gradient, at: 0)
     }
-
+    
+    func smooth(hidden: Bool) {
+        self.layer.opacity = hidden ? 0 : 1
+        self.isHidden = hidden
+    }
 }
 
 extension UIView {
